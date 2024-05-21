@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Movie;
+
+class MovieController extends Controller
+{
+    public function index()
+    {
+        $movies = Movie::all();
+        return view('books.index', compact('books'));
+    }
+
+    public function show($id)
+    {
+      $movie = Movie::findOrFail($id);
+        
+        return view('movies.show', compact('movie'));
+    }
+}
