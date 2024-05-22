@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                   <a class="nav-link  {{Route::currentRouteName() == 'books.index' ? 'active' : ''}}" href="{{route('books.index')}}">Books</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Movies</a>
+                  <a class="nav-link  {{Route::currentRouteName() == 'movies.index' ? 'active' : ''}}" href="{{route('movies.index')}}">Movies</a>
                 </li>
 
               </ul>

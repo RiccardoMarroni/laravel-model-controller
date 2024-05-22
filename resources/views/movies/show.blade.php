@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Movies')
+@section('title', 'Books')
 
 @section('content')
-<main>
+<main class="container">
     <h1>{{ $movie->title }}</h1>
-<p>{{$movie->plot}}</p>
-
+    <img src="{{ $movie->image }}" alt="{{ $movie->title }}">
 </main>
 
 @endsection

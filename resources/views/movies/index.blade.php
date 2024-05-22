@@ -1,15 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'Movies')
+@section('title', 'Books')
 
 @section('content')
-<main>
+<main class="container">
     <h1>All Movies</h1>
-<ul>
-    @foreach ($movies as $movie)
-    <li><a href="{{route('movies.show', $movie->id)}}">{{ $movie->title }}</a></li>
+    <div class="row">
+        @foreach ($movies as $item)
+        <div class="col-12 col-md-4 col-lg-3">
+            @include('partials.card')
+        </div>
+        @endforeach
+    </div>
 
-    @endforeach
+
+    {{-- <li><a href="{{route('movies.show', $movie->id)}}">{{ $movie->title }}</a></li> --}}
+
+
 </ul>
 
 </main>

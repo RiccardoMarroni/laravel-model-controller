@@ -10,13 +10,21 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::all();
-        return view('books.index', compact('books'));
+        //@dd($movies);
+        return view('movies.index', compact('movies'));
     }
 
-    public function show($id)
+    public function show(Movie $movie)
     {
-      $movie = Movie::findOrFail($id);
-        
+        //codice per recuperare il filme dal database
+        // $movie = Movie::find($id);
+        // if ($movie) {
+        //     return view('movies.show', compact('movie'));
+        // } else {
+        //     abort(404);
+        // }
+        //$movie = Movie::findOrFail($id);
         return view('movies.show', compact('movie'));
     }
+
 }

@@ -3,9 +3,9 @@
 @section('title', 'Books')
 
 @section('content')
-<main>
+<main class="container">
     <h1>{{ $book->title }}</h1>
-<p>{{$book->plot}}</p>
+    <p>{{$book->plot}}</p>
 
 </main>
 
